@@ -1,0 +1,38 @@
+{
+  "name": "task-management-backend",
+  "version": "1.0.0",
+  "description": "Assessment for backend",
+  "main": "app.js",
+  "scripts": {
+    "start": "tsc && node dist/app.js",
+    "build": "tsc",
+    "dev": "ts-node src/app.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/muzzammil194/task-management-backend.git"
+  },
+  "keywords": [
+    "Mocha",
+    "TypeScript",
+    "RESTAPI",
+    "Express"
+  ],
+  "author": "Muzzammil Shaikh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/muzzammil194/task-management-backend/issues"
+  },
+  "homepage": "https://github.com/muzzammil194/task-management-backend#readme",
+  "devDependencies": {
+    "@types/express": "^4.17.18",
+    "@types/node": "^20.8.4",
+    "express": "^4.18.2",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "moment": "^2.29.4",
+    "ts-node": "^10.9.1"
+  }
+}
