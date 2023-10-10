@@ -1,0 +1,161 @@
+{
+	"info": {
+		"_postman_id": "9f5bc1cb-1ab2-44b9-b0b6-f4a51efc78f4",
+		"name": "task-backend-api-collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9535268"
+	},
+	"item": [
+		{
+			"name": "NewTask",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"category\": \"laptop\",\n    \"title\": \"Dell\",\n    \"description\": \"HP task\",\n    \"assignedTo\": \"brandon\",\n    \"creationDate\": \"1696966746\",\n    \"dueDate\": \"1696966777\",\n    \"status\": \"pending\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/task",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"task"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getTask",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/task",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"task"
+					],
+					"query": [
+						{
+							"key": "assignedTo",
+							"value": "brandon",
+							"disabled": true
+						},
+						{
+							"key": "category",
+							"value": "laptop",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getByID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/task/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"task",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "f3a4f769-4c2e-4c22-9f3e-3bc55e56102f"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteByID",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/task/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"task",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "f3a4f769-4c2e-4c22-9f3e-3bc55e56102f"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateTask",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"category\": \"laptop test\",\n    \"title\": \"HP\",\n    \"description\": \"Top\",\n    \"assignedTo\": \"brandon\",\n    \"creationDate\": \"1970-01-01 05:32:50\",\n    \"dueDate\": \"1970-01-01 05:32:50\",\n    \"status\": \"completed\",\n    \"id\": \"d8e172d3-9e70-443e-b407-be186bd2ff16\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/task/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"task",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "f3a4f769-4c2e-4c22-9f3e-3bc55e56102f"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
