@@ -57,27 +57,26 @@ export class taskService {
   }
   taskDeleteById = async (id: string) => {
     try {
-      const existRecord = await this.existOrNotEmpty(id);
-      if(existRecord){
-        const filteredDataIndex = this.tasks.findIndex(item => item.id== id);
-        const response=this.tasks.splice(filteredDataIndex, 1);
-        return `Successfully Deleted the record for this id=${id}`;
-      }
-      return "this id is not found!"
+        const existRecord = await this.existOrNotEmpty(id);
+        if (existRecord!='data not found') {
+            const filteredDataIndex = this.tasks.findIndex(item => item.id === id);
+            const response = this.tasks.splice(filteredDataIndex, 1);
+            return `Successfully Deleted the record for this id=${id}`;
+        }
+        return 'this id is not found!';
     } catch (ex) {
-      return ex;
+        return ex;
     }
-  }
+}
   taskUpdateById = async (id: string,task:ITask) => {
     try {
       const existRecord = await this.existOrNotEmpty(id)
-      if(existRecord){
+      if(existRecord!='data not found'){
         const index= this.tasks.findIndex(item => item.id == id);
         this.tasks[index]=task;
         return `Record Updated Successfully against this id=${id}`
       }
-      return existRecord;
-
+      return 'this id is not found!';
     } catch (ex) {
       return ex;
     }
@@ -85,9 +84,10 @@ export class taskService {
   taskGetById = async (id: string) => {
     try {
       const existRecord = await this.existOrNotEmpty(id)
-      if(existRecord){
+      if(existRecord !='data not found'){
         return this.tasks.filter(item => item.id == id);
       }
+      return [];
     } catch (ex) {
       return ex;
     }
