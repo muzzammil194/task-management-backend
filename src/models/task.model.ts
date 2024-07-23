@@ -1,10 +1,6 @@
 export interface INews {
- id?: string;
  category?: string;
  title?: string;
- description?: string;
- assignedTo?: string;
- creationDate?: string;
- dueDate?: string;
- status?: string;
+ author?: string;
+ content?: string;
 }
