@@ -1,5 +1,5 @@
 import express from 'express';
-import routes from './controllers/task.controller';
+import routes from './controllers/news-controller';
 import 'dotenv/config'
 const PORT = process.env.PORT ?? 3000;
 const app = express();

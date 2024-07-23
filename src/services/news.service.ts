@@ -1,11 +1,11 @@
 import moment from 'moment';
-import { ITask } from '../models/task.model';
+import { INews } from '../models/task.model';
 import { v4 as uuidv4 } from 'uuid';
 
-export class taskService {
-  private tasks: ITask[] = [];
+export class newsService {
+  private tasks: INews[] = [];
 
-  postTask = async (task: ITask): Promise<any> => {
+  postNews = async (task: INews): Promise<any> => {
     try {
       if (task.creationDate < task.dueDate) {
         task.id = uuidv4();
@@ -18,7 +18,7 @@ export class taskService {
       return ex;
     }
   }
-  getTask = async (assignedTo?: string, category?: string): Promise<any> => {
+  getNews = async (assignedTo?: string, category?: string): Promise<any> => {
     try {
       if (!assignedTo && !category) {
         const response = this.tasks.map(value => {
@@ -51,43 +51,6 @@ export class taskService {
         return response;
       }
       return "Please filter assignedTo or category to only one value at a time ";
-    } catch (ex) {
-      return ex;
-    }
-  }
-  taskDeleteById = async (id: string) => {
-    try {
-        const existRecord = await this.existOrNotEmpty(id);
-        if (existRecord!='data not found') {
-            const filteredDataIndex = this.tasks.findIndex(item => item.id === id);
-            const response = this.tasks.splice(filteredDataIndex, 1);
-            return `Successfully Deleted the record for this id=${id}`;
-        }
-        return 'this id is not found!';
-    } catch (ex) {
-        return ex;
-    }
-}
-  taskUpdateById = async (id: string,task:ITask) => {
-    try {
-      const existRecord = await this.existOrNotEmpty(id)
-      if(existRecord!='data not found'){
-        const index= this.tasks.findIndex(item => item.id == id);
-        this.tasks[index]=task;
-        return `Record Updated Successfully against this id=${id}`
-      }
-      return 'this id is not found!';
-    } catch (ex) {
-      return ex;
-    }
-  }
-  taskGetById = async (id: string) => {
-    try {
-      const existRecord = await this.existOrNotEmpty(id)
-      if(existRecord !='data not found'){
-        return this.tasks.filter(item => item.id == id);
-      }
-      return [];
     } catch (ex) {
       return ex;
     }

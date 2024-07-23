@@ -1,6 +1,6 @@
 import moment from 'moment';
 import { expect } from 'chai';
-import { taskService } from '../services/task.service';
+import { taskService } from '../services/news.service';
 import { v4 as uuid4 } from 'uuid';
 
 describe('taskService', () => {

@@ -1,4 +1,4 @@
-export interface ITask {
+export interface INews {
  id?: string;
  category?: string;
  title?: string;
