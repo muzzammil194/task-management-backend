@@ -1,0 +1,55 @@
+{
+  "name": "english-news-mobile-website",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 3031",
+    "build": "next build",
+    "start": "next start -p 3080",
+    "lint": "next lint",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "@ant-design/icons": "^4.0.5",
+    "@next/font": "13.1.6",
+    "@stripe/react-stripe-js": "^2.3.0",
+    "@stripe/stripe-js": "^2.1.6",
+    "amfe-flexible": "^2.2.1",
+    "animate.css": "^3.7.2",
+    "antd": "^3.26.6",
+    "antd-mobile": "^2.3.1",
+    "autoprefixer": "^9.7.3",
+    "axios": "^0.19.2",
+    "clsx": "^1.2.1",
+    "jquery": "^3.4.1",
+    "lib-flexible": "^0.3.2",
+    "next": "13.1.6",
+    "nuka-carousel": "^4.6.2",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-froala-wysiwyg": "^3.2.7",
+    "react-highlight-words": "^0.17.0",
+    "react-responsive": "^9.0.2",
+    "react-share": "^5.1.0",
+    "react-sticky": "^6.0.3",
+    "react-stripe-elements": "^6.1.1",
+    "sharp": "^0.32.0",
+    "styled-components": "^6.0.8",
+    "swiper": "^5.4.5",
+    "video-react": "^0.16.0"
+  },
+  "volta": {
+    "node": "16.19.1"
+  },
+  "devDependencies": {
+    "husky": "^8.0.3",
+    "lint-staged": "^13.1.2",
+    "postcss": "^8.0.0",
+    "postcss-pxtorem": "^6.0.0",
+    "prettier": "2.8.4",
+    "sass": "^1.58.3"
+  },
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
+  }
+}

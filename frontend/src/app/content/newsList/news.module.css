@@ -1,0 +1,27 @@
+.main {
+  margin: 10px;
+}
+.container {
+  background-color: gainsboro;
+  height: 100%;
+}
+.news {
+  display: flex;
+  background-color: white;
+  gap: 10px;
+  margin: 10px;
+  padding: 10px;
+}
+.img img {
+  border-radius: 10px;
+}
+.text h5 {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.text p {
+  font-size: 14px;
+}
+
+

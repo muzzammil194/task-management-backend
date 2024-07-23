@@ -1,0 +1,35 @@
+# News Website
+
+## Project Overview
+Briefly explain the purpose and functionality of the application.
+
+## Features Implemented
+- Creat a database by yourself, you can use any database you want, SQL/NoSQL...
+- For backend you could use anything you want ,nodejs/java...
+- For frontend only use the structure I give to you, React Nextjs is required
+
+### details
+- We have different categories, each category is a tab on the top, when we click each tab, we could see the news list under that special category
+    add anthing you want in the app/content/newsList/news.js
+- Here is the categories we need: 
+    News, Opinion , Legal, Health, Faith, Women, Youth, Life, Culture
+- Newslist need the title, the create author, the content, the create time
+- Sorted the news on each page by creat time in each page
+- The final look is in Result expect folder, css needed, no necessary to be the same but need it to be similar
+
+## Bouns: 
+When over 25 news on one page, invisable the left news clcik the button(click me to load more news) shows the next 25 until the end
+
+## How to Run the Project
+yarn dev
+Open [http://localhost:3001](http://localhost:3001) to view it in the browser.
+Pacakage details in package.json
+
+## Approach
+Describe your approach to implementing the features, including any architectural decisions, use of libraries, etc.
+
+## Challenges
+Mention any challenges you faced during the implementation and how you overcame them.
+
+## Future Improvements
+List any improvements or additional features you would like to add given more time.
